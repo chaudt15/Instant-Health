@@ -7,7 +7,7 @@ export default class Cardio extends Component {
     return (
  <View style={{flex: 1, flexDirection: 'column'}}>
       
-      </View>
+ </View>
     );
   }
 

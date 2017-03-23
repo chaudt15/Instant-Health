@@ -7,7 +7,7 @@ export default class Lifts extends Component {
     return (
  <View style={{flex: 1, flexDirection: 'column'}}>
         
-      </View>
+ </View>
     );
   }
 

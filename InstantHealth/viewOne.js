@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, ScrollViews, TouchableHighlight, Navigator } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Image, ScrollView, TouchableHighlight, Navigator } from 'react-native';
 var Dimensions = require('Dimensions');
 var device = Dimensions.get('window');
 
@@ -29,6 +29,21 @@ export default class ViewOne extends Component {
             style={styles.type}
           />
         </View>
+
+        <View style={styles.slideContainer}>
+
+          <ScrollView horizontal={true} snapToAlignment={'center'} showsHorizontalScrollIndicator={false} >
+            <View style={styles.scroller}></View>
+            <View style={styles.scroller}></View>
+            <View style={styles.scroller}></View>
+            <View style={styles.scroller}></View>
+            <View style={styles.scroller}></View>
+          </ScrollView>
+
+        </View>
+
+
+        <View style={styles.bottomContainer}></View>
         <View style={styles.bottomButton}>
         <TouchableHighlight onPress={this._onPressButton.bind(this)}>
           <Image 
@@ -46,6 +61,22 @@ export default class ViewOne extends Component {
 }
 
 const styles = StyleSheet.create({
+  scroller: {
+    width: 360,
+    height: 320,
+    backgroundColor: 'white',
+    marginLeft: 25,
+    marginRight: 25,
+    marginTop: 50 
+  },
+  slideContainer: {
+    flex: 6,
+    backgroundColor: 'transparent'
+  },
+  bottomContainer: {
+    flex: 1,
+    backgroundColor: 'transparent'
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -66,7 +97,8 @@ const styles = StyleSheet.create({
     flex: 1,
     width: undefined,
     height: undefined,
-    backgroundColor:'transparent'
+    backgroundColor:'transparent',
+
   },
   logo: {
     width: 140,

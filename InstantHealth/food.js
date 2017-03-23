@@ -3,11 +3,24 @@ import { AppRegistry, StyleSheet, Text, View, Image, ScrollViews, TouchableHighl
 
 export default class Food extends Component {
   
+	pressThis() {
+  	AlertIOS.alert(
+        "Response",
+        "This is it: " + this.number
+    )
+}
+
+	number = 1;
+
   render() {
     return (
+
+
  <View style={{flex: 1, flexDirection: 'column'}}>
-        
-      </View>
+        <TouchableHighlight onPress={()=>{this.pressThis.bind(this)}}>
+        	<Text style={{top: 15}}>Press This</Text>
+        </TouchableHighlight>
+ </View>
     );
   }
 
