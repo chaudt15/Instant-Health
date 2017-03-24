@@ -17,6 +17,7 @@ var Two = require('./viewTwo');
 var Cardio = require('./cardio');
 var Food = require('./food');
 var Lifts = require('./lifts');
+var Bicep = require('./Workouts/bicep');
 
 export default class InstantHealth extends Component {
   
@@ -46,7 +47,9 @@ export default class InstantHealth extends Component {
       case 'Food':
         return(<Food navigator={navigator} title="Food"/>);   
       case 'Lifts':
-        return(<Lifts navigator={navigator} title="Lifts"/>);     
+        return(<Lifts navigator={navigator} title="Lifts"/>);   
+      case 'Bicep':
+        return(<Bicep navigator={navigator} title="Bicep"/>);       
 
     }
   }

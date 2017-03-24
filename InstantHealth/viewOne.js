@@ -32,7 +32,7 @@ export default class ViewOne extends Component {
 
         <View style={styles.slideContainer}>
 
-          <ScrollView horizontal={true} snapToAlignment={'center'} showsHorizontalScrollIndicator={false} >
+          <ScrollView horizontal={true} snapToAlignment={'center'} showsHorizontalScrollIndicator={false} shadowColor={'black'} shadowOffset={{width: 2,height: 1}} shadowOpacity={0.15}>
             <View style={styles.scroller}></View>
             <View style={styles.scroller}></View>
             <View style={styles.scroller}></View>
@@ -64,10 +64,12 @@ const styles = StyleSheet.create({
   scroller: {
     width: 360,
     height: 320,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255,255,255,0.9)',
     marginLeft: 25,
     marginRight: 25,
-    marginTop: 50 
+    marginTop: 50,
+    borderRadius: 8,
+
   },
   slideContainer: {
     flex: 6,

@@ -4,28 +4,7 @@ import { AppRegistry, StyleSheet, Text, View, Image, ScrollViews, TouchableHighl
 export default class ViewTwo extends Component {
 
 
-/*
-<TouchableHighlight onPress={this.getMoviesFromApiAsync.bind(this)}>
-        <Text>Apple</Text>
-        </TouchableHighlight>
-*/
 
-//This function get the JSON data from the API
-/*  getMoviesFromApiAsync() {
-    console.log('executed');
-fetch("http://45.55.168.202:3300/food/", {method: "GET"})
-.then((response) => response.json())
-.then((responseData) => {
-  var result = JSON.stringify(responseData)
-    AlertIOS.alert(
-
-        "GET Response",
-        "This is it: " + result
-    )
-})
-.done(); 
-  }
-*/
    
 
    _onPressButton() {
@@ -64,7 +43,7 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
           </View>
 
           <View style={styles.welcomeBar}>
-            <Text>What Do You Need?</Text>
+            <Text style={{fontFamily: 'AvenirNext-Regular', fontSize: 24}}>What Do You Need?</Text>
           </View>
         </View>
 
@@ -74,7 +53,7 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
  
           <View style={styles.touchBar}>
              <TouchableHighlight onPress={this._onPressButton.bind(this)}>
-              <Text style={{textAlign: 'center'}}>Go to lift section</Text>
+              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Strength Workout</Text>
             </TouchableHighlight>
           </View>
         </Image>
@@ -84,7 +63,7 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
 
          <View style={styles.touchBar}>
             <TouchableHighlight onPress={this._onPressButton2.bind(this)}>
-            <Text style={{textAlign: 'center'}}>Go to food section</Text>
+            <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Custom Meal</Text>
           </TouchableHighlight>
           </View>
       </Image>  
@@ -94,7 +73,7 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
 
          <View style={styles.touchBar}>
             <TouchableHighlight onPress={this._onPressButton3.bind(this)}>
-              <Text style={{textAlign: 'center'}}>Go to cardio section</Text>
+              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Cardio Excercise</Text>
             </TouchableHighlight>
           </View>
       </Image>  
@@ -129,7 +108,8 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
       flex: 2.5,
       backgroundColor: 'white',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderBottomWidth: StyleSheet.hairlineWidth
     },
     liftsBG:{
       flex: 2,
@@ -152,7 +132,8 @@ fetch("http://45.55.168.202:3300/food/", {method: "GET"})
       left: 0,
       right: 0,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderBottomWidth: StyleSheet.hairlineWidth
     },
    
 
