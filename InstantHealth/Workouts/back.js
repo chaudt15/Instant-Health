@@ -11,22 +11,14 @@ class Data extends Component {
       if(this.props.api === 'false'){
         return(
          <View style={{flex: 1, backgroundColor: 'transparent'}}>
-           <Text>Click the button below to generate a workout</Text>
+           <Text>Nothing yet</Text>
         </View>
         );
       }
       else{
-        var imageURL = this.props.imageURL;
-
         return(
-
         <View style={{flex: 1, backgroundColor: 'transparent'}}>
-         <Image
-          style={{width: 300, height: 300}}
-          source={{uri: this.props.imageURL}}
-        />
-           <Text>Name: {this.props.name}{"\n"}Calories: {this.props.calories}{"\n"}Reps: {this.props.reps}{"\n"}Rest: {this.props.rest}{"\n"}Sets: {this.props.sets}{"\n"}</Text>
-           
+           <Text>Name: {this.props.name}{"\n"}Calories: {this.props.calories}{"\n"}Reps: {this.props.reps}{"\n"}Rest: {this.props.rest}{"\n"}Sets: {this.props.sets}{"\n"}Image: {this.props.imageURL}{"\n"}</Text>
         </View>
         );
       }
@@ -36,7 +28,7 @@ class Data extends Component {
 }
 
 
-export default class Bicep extends Component {
+export default class Back extends Component {
   
   constructor(props){
     super(props);
@@ -74,9 +66,9 @@ rest: String;
 imageURL: String;
 apiCalled = 'false';
 
-_generateBicep(){
+_generateBack(){
   console.log('executed');
-  fetch("http://45.55.168.202:3300/lifts/bicep", {method: "GET"})
+  fetch("http://45.55.168.202:3300/lifts/back", {method: "GET"})
   .then((response) => response.json())
   .then((responseData) => {
     var result = JSON.stringify(responseData)
@@ -114,7 +106,7 @@ _generateBicep(){
                   </View>
 
                   <View style={styles.welcomeBar}>
-                    <Text style={{fontFamily: 'AvenirNext-Regular', fontSize: 24}}>Bicep Workout Generator</Text>
+                    <Text style={{fontFamily: 'AvenirNext-Regular', fontSize: 24}}>Back Workout Generator</Text>
                   </View>
                 </View>
 
@@ -123,8 +115,8 @@ _generateBicep(){
                   <Data api={this.apiCalled} name={this.name} calories={this.calories} reps={this.reps} sets={this.sets} rest={this.rest} imageURL={this.imageURL}></Data>
                 </View>
                 <View style={styles.generate}>
-                  <TouchableHighlight onPress={this._generateBicep.bind(this)}>
-                    <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20, color: 'white'}}>Click Here To Generate Bicep Workout</Text>
+                  <TouchableHighlight onPress={this._generateBack.bind(this)}>
+                    <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Click Here To Generate Back Workout</Text>
                   </TouchableHighlight>
                 </View>
               </View>
@@ -139,7 +131,7 @@ _generateBicep(){
 const styles = StyleSheet.create({
   display: {
       flex: 6,
-      backgroundColor: 'white'
+      backgroundColor: 'rgba(236,233,231,0.99)'
     },
     generate: {
       flex: 1,
@@ -194,4 +186,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = Bicep;
+module.exports = Back;

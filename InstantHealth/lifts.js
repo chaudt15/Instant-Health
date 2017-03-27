@@ -22,6 +22,54 @@ export default class Lifts extends Component {
   });
 }
 
+ _onPressButtonAbs() {
+ AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
+ _onPressButtonChest() {
+  this.props.navigator.push({
+    id: 'Chest'
+  });
+}
+
+ _onPressButtonTricep() {
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
+ _onPressButtonShoulder() {
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
+ _onPressButtonCalf() {
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
+ _onPressButtonBacks() {
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
+ _onPressButtonHamstring() {
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
+}
+
   render() {
     return (
  <View style={{flex: 1, flexDirection: 'column'}}>
@@ -53,7 +101,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutAbs.jpg')}>
       				 <View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonAbs.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Abdominal Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -71,7 +119,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutChest.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonChest.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Chest Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -80,7 +128,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer2}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutTricep.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonTricep.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Tricep Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -89,7 +137,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutShoulder.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonShoulder.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Shoulder Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -98,7 +146,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer2}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutCalf.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonCalf.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Calf Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -107,7 +155,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutLat.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonBacks.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Back Workout</Text>
 			            </TouchableHighlight>
 			          </View>
@@ -116,7 +164,7 @@ export default class Lifts extends Component {
       		<View style={styles.workoutContainer2}>
       			<Image style={styles.imageBG} source={require('./Assets/Images/workoutHamstring.jpg')}>
       				<View style={styles.touchBar}>
-			             <TouchableHighlight onPress={this._onPressButton.bind(this)}>
+			             <TouchableHighlight onPress={this._onPressButtonHamstring.bind(this)}>
 			              <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Hamstring Workout</Text>
 			            </TouchableHighlight>
 			          </View>

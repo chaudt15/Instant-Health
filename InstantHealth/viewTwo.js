@@ -14,16 +14,20 @@ export default class ViewTwo extends Component {
 }
 
  _onPressButton2() {
-  this.props.navigator.push({
-    id: 'Food'
-  });
+ AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
 }
 
  _onPressButton3() {
-  this.props.navigator.push({
-    id: 'Cardio'
-  });
+  AlertIOS.alert(
+ 'Coming Soon',
+ 'This feature will be coming very soon!'
+);
 }
+
+
 
 //This is the rendered content
   render() {

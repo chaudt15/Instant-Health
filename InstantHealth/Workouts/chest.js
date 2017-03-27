@@ -2,31 +2,24 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Image, ScrollView, TouchableHighlight, Navigator, AlertIOS } from 'react-native';
 
 
-
-
-
 class Data extends Component {
 
   render(){
       if(this.props.api === 'false'){
         return(
          <View style={{flex: 1, backgroundColor: 'transparent'}}>
-           <Text>Click the button below to generate a workout</Text>
+           <Text>Click the button below to generate a workout!</Text>
         </View>
         );
       }
       else{
-        var imageURL = this.props.imageURL;
-
         return(
-
         <View style={{flex: 1, backgroundColor: 'transparent'}}>
-         <Image
+        <Image
           style={{width: 300, height: 300}}
           source={{uri: this.props.imageURL}}
         />
            <Text>Name: {this.props.name}{"\n"}Calories: {this.props.calories}{"\n"}Reps: {this.props.reps}{"\n"}Rest: {this.props.rest}{"\n"}Sets: {this.props.sets}{"\n"}</Text>
-           
         </View>
         );
       }
@@ -36,7 +29,7 @@ class Data extends Component {
 }
 
 
-export default class Bicep extends Component {
+export default class Chest extends Component {
   
   constructor(props){
     super(props);
@@ -74,9 +67,9 @@ rest: String;
 imageURL: String;
 apiCalled = 'false';
 
-_generateBicep(){
+_generateChest(){
   console.log('executed');
-  fetch("http://45.55.168.202:3300/lifts/bicep", {method: "GET"})
+  fetch("http://45.55.168.202:3300/lifts/chest", {method: "GET"})
   .then((response) => response.json())
   .then((responseData) => {
     var result = JSON.stringify(responseData)
@@ -114,7 +107,7 @@ _generateBicep(){
                   </View>
 
                   <View style={styles.welcomeBar}>
-                    <Text style={{fontFamily: 'AvenirNext-Regular', fontSize: 24}}>Bicep Workout Generator</Text>
+                    <Text style={{fontFamily: 'AvenirNext-Regular', fontSize: 24}}>Chest Workout Generator</Text>
                   </View>
                 </View>
 
@@ -123,8 +116,8 @@ _generateBicep(){
                   <Data api={this.apiCalled} name={this.name} calories={this.calories} reps={this.reps} sets={this.sets} rest={this.rest} imageURL={this.imageURL}></Data>
                 </View>
                 <View style={styles.generate}>
-                  <TouchableHighlight onPress={this._generateBicep.bind(this)}>
-                    <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20, color: 'white'}}>Click Here To Generate Bicep Workout</Text>
+                  <TouchableHighlight onPress={this._generateChest.bind(this)}>
+                    <Text style={{textAlign: 'center', fontFamily: 'Avenir-Light', fontSize: 20}}>Click Here To Generate Chest Workout</Text>
                   </TouchableHighlight>
                 </View>
               </View>
@@ -139,7 +132,7 @@ _generateBicep(){
 const styles = StyleSheet.create({
   display: {
       flex: 6,
-      backgroundColor: 'white'
+      backgroundColor: 'rgba(236,233,231,0.99)'
     },
     generate: {
       flex: 1,
@@ -194,4 +187,5 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = Bicep;
+
+module.exports = Chest;

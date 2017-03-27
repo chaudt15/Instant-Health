@@ -18,6 +18,13 @@ var Cardio = require('./cardio');
 var Food = require('./food');
 var Lifts = require('./lifts');
 var Bicep = require('./Workouts/bicep');
+var Abs = require('./Workouts/abs');
+var Chest = require('./Workouts/chest');
+var Tricep = require('./Workouts/tricep');
+var Shoulder = require('./Workouts/shoulder');
+var Calf = require('./Workouts/calf');
+var Back = require('./Workouts/back');
+var Hamstring = require('./Workouts/hamstring');
 
 export default class InstantHealth extends Component {
   
@@ -49,7 +56,21 @@ export default class InstantHealth extends Component {
       case 'Lifts':
         return(<Lifts navigator={navigator} title="Lifts"/>);   
       case 'Bicep':
-        return(<Bicep navigator={navigator} title="Bicep"/>);       
+        return(<Bicep navigator={navigator} title="Bicep"/>);     
+      case 'Abs':
+        return(<Abs navigator={navigator} title="Abs"/>);      
+      case 'Chest':
+        return(<Chest navigator={navigator} title="Chest"/>);
+      case 'Tricep':
+        return(<Tricep navigator={navigator} title="Tricep"/>);    
+      case 'Shoulder':
+        return(<Shoulder navigator={navigator} title="Shoulder"/>);   
+      case 'Calf':
+        return(<Calf navigator={navigator} title="Calf"/>);
+      case 'Back':
+        return(<Back navigator={navigator} title="Back"/>);
+       case 'Hamstring':
+        return(<Hamstring navigator={navigator} title="Hamstring"/>);                          
 
     }
   }
